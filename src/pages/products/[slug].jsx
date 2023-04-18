@@ -7,6 +7,14 @@ export default function Product({ data }) {
       <Head>
         <title>{data.productdisplayname}</title>
       </Head>
+
+      <Image
+        src={`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp`}
+        alt={data.productdisplayname}
+        width={100}
+        height={100}
+        sizes=" (max-width: 750px) 100vw, 750px"
+      ></Image>
       <h1>{data.productdisplayname}</h1>
     </>
   );
