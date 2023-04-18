@@ -1,6 +1,6 @@
-import { ListItem } from "./ListItem";
+import ListItem from "./ListItem";
 
-export function ProductList(props) {
+export default function ProductList(props) {
   // console.log(props.products);
   return (
     <>

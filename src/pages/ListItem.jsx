@@ -1,6 +1,6 @@
 import Anchor from "@/components/Anchor";
 
-export function ListItem(props) {
+export default function ListItem(props) {
   // console.log(props.product);
   return (
     <>
