@@ -48,11 +48,9 @@ export async function getStaticPaths() {
   const res = await fetch(api);
   const data = await res.json();
   const paths = data.map((object) => {
-    console.log(object.slug);
     return { params: { slug: String(object.id) } };
   });
 
-  console.log(data);
   return {
     paths,
     fallback: false,
