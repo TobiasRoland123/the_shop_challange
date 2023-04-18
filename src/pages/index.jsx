@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Anchor from "@/components/Anchor";
 import Layout from "@/components/Layout";
-import { ProductList } from "./ProductList";
+import ProductList from "./ProductList";
 
 export default function App({ products }) {
   // console.log(products);
