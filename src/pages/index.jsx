@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Anchor from "@/components/Anchor";
 import Layout from "@/components/Layout";
+import ProductList from "@/components/ProductList";
 
 export default function App({ products }) {
   // console.log(products);
@@ -29,33 +30,33 @@ export async function getServerSideProps() {
   };
 }
 
-function ProductList(props) {
-  // console.log(props.products);
-  return (
-    <>
-      <article>
-        <h2>product List</h2>
-        <ul>
-          {props.products.map((product) => (
-            <ListItem product={product} />
-          ))}
-        </ul>
-      </article>
-    </>
-  );
-}
+// function ProductList(props) {
+//   // console.log(props.products);
+//   return (
+//     <>
+//       <article>
+//         <h2>product List</h2>
+//         <ul>
+//           {props.products.map((product) => (
+//             <ListItem product={product} />
+//           ))}
+//         </ul>
+//       </article>
+//     </>
+//   );
+// }
 
-function ListItem(props) {
-  // console.log(props.product);
-  return (
-    <>
-      <li key={props.product.id}>
-        <h3>{props.product.productdisplayname}</h3>
+// function ListItem(props) {
+//   // console.log(props.product);
+//   return (
+//     <>
+//       <li key={props.product.id}>
+//         <h3>{props.product.productdisplayname}</h3>
 
-        <p>{props.product.price}</p>
+//         <p>{props.product.price}</p>
 
-        <Anchor href={`/products/${props.product.id}`}> Read more</Anchor>
-      </li>
-    </>
-  );
-}
+//         <Anchor href={`/products/${props.product.id}`}> Read more</Anchor>
+//       </li>
+//     </>
+//   );
+// }
