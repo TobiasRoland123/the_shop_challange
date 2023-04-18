@@ -1,3 +1,4 @@
+import Anchor from "@/components/Anchor";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -8,6 +9,8 @@ export default function Product({ data }) {
         <title>{data.productdisplayname}</title>
       </Head>
 
+      <Anchor href={"/"}>GO BACK</Anchor>
+
       <Image
         src={`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp`}
         alt={data.productdisplayname}
@@ -16,6 +19,7 @@ export default function Product({ data }) {
         sizes=" (max-width: 750px) 100vw, 750px"
       ></Image>
       <h1>{data.productdisplayname}</h1>
+      <p>{data.price} kr</p>
     </>
   );
 }
